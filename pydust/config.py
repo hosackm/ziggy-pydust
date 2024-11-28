@@ -66,6 +66,7 @@ class ToolPydust(BaseModel):
     def validate_atts(self):
         if self.self_managed and self.ext_modules:
             raise ValueError("ext_modules cannot be defined when using Pydust in self-managed mode.")
+        return self
 
 
 @functools.cache
